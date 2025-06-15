@@ -7,6 +7,10 @@
     "build": "tsc",
     "test": "vitest"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cerv333/rocinet-ts-sdk.git"
+  },
   "author": "Michal Bartl",
   "license": "WTFPL",
   "description": "",
