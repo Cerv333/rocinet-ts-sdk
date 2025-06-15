@@ -1,6 +1,6 @@
 {
   "name": "rocinet",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
