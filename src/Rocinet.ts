@@ -20,7 +20,7 @@ export class Rocinet {
     };
   }
 
-  public async* getDataItems(dataset: string | number | Dataset, contentUpdateAfter?: Date, contentUpdateBefore?: Date): AsyncGenerator<DataItem> {
+  public async* getDataItems<T>(dataset: string | number | Dataset, contentUpdateAfter?: Date, contentUpdateBefore?: Date): AsyncGenerator<DataItem<T>> {
     const datasetObj = dataset instanceof Dataset ? dataset : await this.getDataset(dataset);
     const loader = await this.getContentLoader(datasetObj);
 
@@ -45,7 +45,7 @@ export class Rocinet {
       const json = await res.json();
       const items = json.items || [];
       for (const item of items) {
-        yield DataItem.from(item, loader);
+        yield DataItem.from<T>(item, loader);
       }
       offset += this.listSize;
       stop = items.length < this.listSize;

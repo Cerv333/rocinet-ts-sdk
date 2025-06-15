@@ -13,7 +13,7 @@
   },
   "author": "Michal Bartl",
   "license": "WTFPL",
-  "description": "",
+  "description": "Rocinet TypeScript SDK",
   "devDependencies": {
     "typescript": "^5.8.3",
     "vitest": "^3.2.3"
